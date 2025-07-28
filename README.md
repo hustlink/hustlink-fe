@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HustLink Frontend
 
-## Getting Started
+Modern web application built with Next.js 15, TypeScript, and Tailwind CSS for the HustLink platform.
 
-First, run the development server:
+## 🚀 Features
+
+- **Component Playground**: Interactive showcase for UI components
+- **Modern Tech Stack**: Next.js 15, React 19, TypeScript, Tailwind CSS
+- **UI Components**: shadcn/ui component library with Radix UI primitives
+- **Code Quality**: BiomeJS for linting and formatting
+- **Git Hooks**: Husky for pre-commit hooks with lint-staged
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+
+## 📋 Prerequisites
+
+Make sure you have the following installed:
+- **Node.js** (version 18 or higher)
+- **pnpm** (recommended package manager)
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/hustlink/hustlink_fe.git
+   cd hustlink_fe
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Setup Husky git hooks**
+   ```bash
+   pnpm prepare
+   ```
+
+## 🏃‍♂️ Getting Started
+
+### Development Server
+
+Start the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Development
+pnpm dev          # Start development server
 
-## Learn More
+# Building
+pnpm build        # Build for production
+pnpm start        # Start production server
 
-To learn more about Next.js, take a look at the following resources:
+# Code Quality
+pnpm lint         # Run BiomeJS linter
+pnpm lint:strict  # Run linter with error-on-warnings
+pnpm format:check # Format code with BiomeJS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Git Hooks
+pnpm prepare      # Setup Husky git hooks
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Component Playground
 
-## Deploy on Vercel
+Visit `/playground` to explore and test UI components:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Button Component**: Various variants, sizes, and interactive examples
+- **Interactive Examples**: Counter, form actions, confirmation dialogs
+- **Testing Area**: Space for experimenting with component combinations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 Development Guidelines
+
+### Code Quality
+
+This project uses BiomeJS for consistent code formatting and linting:
+
+- **Pre-commit hooks**: Automatically format and lint staged files
+- **Configuration**: See `biome.json` for rules and settings
+- **Commands**: Use `pnpm lint` and `pnpm format:check`
+
+### Git Workflow
+
+1. Make your changes
+2. Stage your files: `git add .`
+3. Commit (triggers pre-commit hooks): `git commit -m "your message"`
+4. Push: `git push`
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+The easiest way to deploy is using [Vercel Platform](https://vercel.com/new):
+
+1. Connect your GitHub repository
+2. Configure build settings (automatic detection)
+3. Deploy
+
+### Manual Deployment
+
+```bash
+# Build the application
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/)
+- **Code Quality**: [BiomeJS](https://biomejs.dev/)
+- **Git Hooks**: [Husky](https://typicode.github.io/husky/) + [lint-staged](https://github.com/okonet/lint-staged)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
+- [BiomeJS Documentation](https://biomejs.dev/)
