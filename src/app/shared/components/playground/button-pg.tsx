@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/app/shared/components/ui/button';
 
 export function ButtonPlayground() {
 	return (
