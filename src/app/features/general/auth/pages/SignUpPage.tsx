@@ -1,7 +1,4 @@
 import SignUpMethod from '@/app/features/general/auth/components/SignUpMethod';
-import SignupMethod from '@/app/features/general/auth/components/SignUpMethod';
-import SignUpForm from '../components/SignUpForm';
-import SignUpVerification from '../components/SignUpVerification';
 
 export default function SignupPage() {
 	return (
