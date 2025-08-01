@@ -1,14 +1,18 @@
+'use client';
+
 import React from 'react';
 import '../../../../globals.css';
 import 'tw-animate-css';
 import Image from 'next/image';
-import { FaEnvelope, FaUserCircle } from 'react-icons/fa';
+import { FaBell, FaEnvelope, FaUserCircle } from 'react-icons/fa';
+import { HiOutlineUserCircle } from 'react-icons/hi2';
 import { IoMdArrowDropdown } from 'react-icons/io';
+import { RxEnvelopeClosed } from 'react-icons/rx';
 
 export default function Navbar() {
 	return (
 		<nav
-			className='mx-auto h-[76px] px-4 sm:px-6 py-3 border-b flex items-center justify-between bg-white shadow-sm opacity-100'
+			className='mx-auto h-[65px] px-4 sm:px-6 py-3 border-b flex items-center justify-between bg-white shadow-sm opacity-100'
 			style={{ transform: 'rotate(0deg)' }}
 		>
 			{/* Kiri: Logo dan Menu */}
@@ -19,22 +23,37 @@ export default function Navbar() {
 				</div>
 
 				{/* Menu */}
-				<ul className='hidden md:flex gap-4 text-lg font-medium text-gray-700'>
+				<ul className='hidden md:flex gap-5 text-base font-medium text-gray-700'>
 					<li className='flex items-center gap-1 hover:text-blue-600 cursor-pointer'>
 						Hire Talent <IoMdArrowDropdown />
 					</li>
 					<li className='flex items-center gap-1 hover:text-blue-600 cursor-pointer'>
-						My Projects <IoMdArrowDropdown />
+						How To Use
 					</li>
 					<li className='hover:text-blue-600 cursor-pointer'>Pricing</li>
-					<li className='hover:text-blue-600 cursor-pointer'>Message</li>
+					<li className='hover:text-blue-600 cursor-pointer'>
+						Project Management
+					</li>
 				</ul>
 			</div>
 
 			{/* Kanan: Icon Message & Profile */}
-			<div className='flex items-center gap-6 text-xl text-gray-800'>
-				<FaEnvelope className='w-7 h-7 cursor-pointer hover:text-blue-600' />
-				<FaUserCircle className='w-7 h-7 cursor-pointer hover:text-blue-600' />
+			<div className='flex items-center gap-7 text-xl text-gray-800'>
+				<Image
+					src='/vector.svg'
+					alt='notification'
+					width={29}
+					height={37}
+					priority
+				/>
+				<Image
+					src='/Vector (1).svg'
+					alt='inbox'
+					width={31}
+					height={37}
+					priority
+				/>
+				<Image src='/group.svg' alt='profile' width={35} height={35} priority />
 			</div>
 		</nav>
 	);
