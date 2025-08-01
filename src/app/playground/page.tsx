@@ -1,6 +1,8 @@
 import { ButtonPlayground } from '@/app/shared/components/playground/button-pg';
 import { Button } from '@/app/shared/components/ui/button';
-import { Navbar } from '@/app/shared/components/ui/navbar';
+import { Navbar } from '@/app/shared/components/widgets/Navbar';
+import BenefitSection from '../features/freelancer/landing/components/BenefitsSection';
+import Footer from '../shared/components/widgets/Footer';
 
 export default function Playground() {
 	return (
@@ -8,22 +10,15 @@ export default function Playground() {
 			<Navbar
 				leftContent={
 					<>
-						<a href='/about' className='text-gray-700 hover:text-blue-500'>
-							About
-						</a>
-						<a href='/services' className='text-gray-700 hover:text-blue-500'>
-							Services
-						</a>
-						<a href='/contact' className='text-gray-700 hover:text-blue-500'>
-							Contact
-						</a>
+						<a href='/about'>About</a>
+						<a href='/services'>Services</a>
+						<a href='/contact'>Contact</a>
 					</>
 				}
 				rightContent={
 					<>
-						<button className='bg-blue-500 text-white px-3 py-1 rounded'>
-							Login
-						</button>
+						<Button variant='ghost'>Login</Button>
+						<Button variant='default'>Sign Up</Button>
 					</>
 				}
 			/>
@@ -58,6 +53,8 @@ export default function Playground() {
 					</section>
 				</div>
 			</div>
+			<BenefitSection />
+			<Footer />
 		</>
 	);
 }
