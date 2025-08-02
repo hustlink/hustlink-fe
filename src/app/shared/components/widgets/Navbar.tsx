@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import Image from 'next/image';
@@ -61,29 +60,3 @@ const Navbar: React.FC<NavbarProps> = ({ leftContent, rightContent }) => {
 };
 
 export { Navbar };
-=======
-import Image from 'next/image';
-
-export default function Navbar() {
-	return (
-		<nav className='w-full bg-white shadow-md px-6 py-4'>
-			<div className='max-w-6xl mx-auto flex items-center'>
-				{/* Logo + Brand name */}
-				<div className='flex items-center gap-2'>
-					{/* Replace this with your actual logo */}
-					<Image
-						src='/logo.svg'
-						alt='Hustlink Logo'
-						className='w-10 h-10'
-						width={62}
-						height={62}
-					/>
-					<span className='text-xl font-bold text-gray-800'>
-						Hust<span className='text-blue-500'>link</span>
-					</span>
-				</div>
-			</div>
-		</nav>
-	);
-}
->>>>>>> c6ee758 (Update feat:LandingFreelancer, UploadCVPage ; comp: AdvantageSection, CategoryList,LandingInfo)
