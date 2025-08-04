@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { Button } from '@/app/shared/components/ui/button';
 
 export function ButtonPlayground() {
@@ -43,6 +44,19 @@ export function ButtonPlayground() {
 					<Button>Normal</Button>
 					<Button disabled>Disabled</Button>
 					<Button className='loading'>Loading...</Button>
+				</div>
+			</div>
+
+			{/* Button With Icon */}
+			<div className='space-y-4'>
+				<h3 className='text-lg font-medium'>Icon Position</h3>
+				<div className='flex flex-wrap gap-4'>
+					<Button icon={<FiArrowLeft />} iconPosition='left'>
+						Left Icon
+					</Button>
+					<Button icon={<FiArrowRight />} iconPosition='right'>
+						Right Icon
+					</Button>
 				</div>
 			</div>
 
