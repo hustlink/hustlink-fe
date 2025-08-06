@@ -13,16 +13,17 @@ const Navbar: React.FC<NavbarProps> = ({ leftContent, rightContent }) => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	return (
-		<header className='w-full bg-white shadow-md z-50 relative'>
-			<nav className='mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between'>
+		<header className='w-full bg-transparent bg-no-repeat z-50 relative antialiased'>
+			<nav className='mx-auto px-4 sm:px-6 lg:px-8 h-16 lg:h-20 flex items-center justify-between'>
 				{/* Left section */}
-				<div className='flex items-center space-x-1.5 text-253140 font-bold'>
+				<div className='flex items-center space-x-1.5 font-bold'>
 					<Image
 						src='/logo-navbar.svg'
 						alt='logo'
 						width={80}
 						height={80}
 						unoptimized
+						className='w-auto h-[80px]'
 					/>
 					<a href='/' className='text-[19px]'>
 						Hust<span className='text-blue-600'>link</span>
@@ -52,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({ leftContent, rightContent }) => {
 
 			{/* Mobile dropdown menu */}
 			{isMobileMenuOpen && (
-				<div className='md:hidden bg-white shadow-md px-4 py-3 space-y-4'>
+				<div className='md:hidden bg-transparent px-4 py-3 space-y-4'>
 					{leftContent && (
 						<div className='flex flex-col space-y-2'>{leftContent}</div>
 					)}
