@@ -9,9 +9,9 @@ export default function HeroLanding() {
 	const [activeTab, setActiveTab] = useState<'skills' | 'categories'>('skills');
 
 	return (
-		<section className='w-full max-w-screen-xl mx-auto px-4 py-8'>
+		<section className='w-full max-w-screen-xl mx-auto px-4 py-8 ml-[99px]'>
 			{/* Container 1: h1 & h2 */}
-			<div className='mb-10'>
+			<div className='mb-3'>
 				<h1 className='text-7xl font-bold text-gray-800'>IT Development</h1>
 				<h2 className='mt-20 text-5xl font-bold text-gray-800'>
 					Trusted remote development and IT experts
@@ -20,14 +20,14 @@ export default function HeroLanding() {
 
 			<div className='mb-8 flex flex-col md:flex-row items-start  gap-8'>
 				{/* Kiri: Heading, Tab Buttons, Search */}
-				<div className='md:w-2/3 w-full flex flex-col gap-6'>
+				<div className='mt-7  md:w-2/3 w-full flex flex-col gap-6'>
 					{/* h3 */}
 					<h3 className='text-3xl font-bold text-gray-800'>
 						Choose IT Development skills to complete your project efficiently
 					</h3>
-					<div className='bg-blue-200 rounded-2xl p-4 md:p-6 w-full max-w-4xl mx-auto'>
+					<div className='bg-blue-200 rounded-[40px] p-4 md:p-6 w-full max-w-4xl mx-auto'>
 						{/* Tab Buttons */}
-						<div className='flex mt- mb-2'>
+						<div className='flex mt- mb-2 ml-[25px]'>
 							<div className='mt-4 mb-4 flex bg-blue-500 h-[40px] md:h-[48px] lg:h-[52px] rounded-full w-fit overflow-hidden'>
 								<button
 									className={`w-40 py-3 text-white font-semibold transition-all duration-200 ${
@@ -54,11 +54,11 @@ export default function HeroLanding() {
 
 						{/* Search Box */}
 						<div className='flex'>
-							<div className='mt-4 mb-4 flex items-center bg-white rounded-full px-4 py-2 w-full max-w-md shadow-sm'>
+							<div className='mt-4 mb-4 ml-[25px] mr-[20px] flex items-center bg-white rounded-full px-4 py-2 w-full h-14 shadow-sm'>
 								<input
 									type='text'
 									placeholder='Search by category in IT Development'
-									className='flex-grow bg-transparent outline-none text-lg text-gray-700 placeholder-gray-400 gap-4'
+									className='flex-grow bg-transparent outline-none text-lg text-gray-700 placeholder-gray-400 gap-4 tracking-wide'
 								/>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -93,3 +93,5 @@ export default function HeroLanding() {
 		</section>
 	);
 }
+
+export { HeroLanding };
