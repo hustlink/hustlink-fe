@@ -34,24 +34,48 @@ const buttonVariants = cva(
 	},
 );
 
+type ButtonProps = React.ComponentProps<'button'> &
+	VariantProps<typeof buttonVariants> & {
+		asChild?: boolean;
+		icon?: React.ReactElement;
+		iconPosition?: 'left' | 'right';
+	};
+
 function Button({
 	className,
 	variant,
 	size,
 	asChild = false,
+	icon,
+	iconPosition = 'left',
+	children,
 	...props
-}: React.ComponentProps<'button'> &
-	VariantProps<typeof buttonVariants> & {
-		asChild?: boolean;
-	}) {
+}: ButtonProps) {
 	const Comp = asChild ? Slot : 'button';
+	const iconEl = icon as React.ReactElement<any>;
 
 	return (
 		<Comp
 			data-slot='button'
 			className={cn(buttonVariants({ variant, size, className }))}
 			{...props}
-		/>
+		>
+			{icon && iconPosition === 'left' && (
+				<span className='flex items-center'>
+					{React.cloneElement(iconEl, {
+						className: cn(iconEl.props.className),
+					})}
+				</span>
+			)}
+			{children}
+			{icon && iconPosition === 'right' && (
+				<span className='flex items-center'>
+					{React.cloneElement(iconEl, {
+						className: cn(iconEl.props.className),
+					})}
+				</span>
+			)}
+		</Comp>
 	);
 }
 
