@@ -1,8 +1,7 @@
 // components/Footer.tsx
-'use client';
 
+import { Poppins } from 'next/font/google';
 import Image from 'next/image';
-
 import {
 	FaFacebook,
 	FaInstagram,
@@ -11,15 +10,30 @@ import {
 	FaYoutube,
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { MdCopyright } from 'react-icons/md';
+
+const poppins = Poppins({
+	variable: '--font-poppins',
+	subsets: ['latin'],
+	weight: ['400', '500', '600', '700'],
+});
 
 export default function Footer() {
 	return (
-		<footer className='bg-light-900 text-black py-10'>
-			<div className='max-w-7xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6'>
+		<footer className='bg-white text-black py-10'>
+			<div
+				className={`w-full mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 ${poppins.className}`}
+			>
 				{/* Logo Column */}
-				<div className='flex items-start gap-x-3 mt-1'>
-					<Image src='/logo.svg' alt='Hustlink Logo' width={79} height={78} />
-					<span className='text-3xl font-bold'>
+				<div className='flex items-start gap-x-1'>
+					<Image
+						src='/logo-navbar.svg'
+						alt='Hustlink Logo'
+						width={42}
+						height={42}
+						className='w-[80px] h-auto mt-[-24px]'
+					/>
+					<span className='text-2xl font-bold'>
 						Hust<span className='text-blue-500'>link</span>
 					</span>
 				</div>
@@ -104,35 +118,39 @@ export default function Footer() {
 				</div>
 			</div>
 			{/* Bottom Row: Copyright + Socials */}
-			<div className='max-w-7xl mx-auto px-6 mt-8 pt-4 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center text-sm'>
-				<p className='mb-2 text-3-xl font-bold sm:mb-0'>© Hustlink 2025</p>
+			<div className='w-full mx-auto px-10 mt-8 pt-4 border-gray-700 flex flex-col sm:flex-row justify-between items-center text-sm'>
+				<div className='flex items-center gap-2'>
+					<MdCopyright className='text-2xl' />
+					<span className='text-black font-bold'>Hustlink 2025</span>
+				</div>
+				{/* <p className='mb-2 text-3xl font-bold sm:mb-0'>© Hustlink 2025</p> */}
 				<div className='flex gap-4 text-3xl'>
 					{/* Replace with SVGs or external links as needed */}
 					<a
-						href='https://twitter.com'
+						href='https://facebook.com'
 						target='_blank'
 						rel='noopener noreferrer'
 					>
-						<FaFacebook className='hover:text-blue-400' />
+						<FaFacebook className='text-4xl hover:text-blue-700' />
 					</a>
 					<a
 						href='https://instagram.com'
 						target='_blank'
 						rel='noopener noreferrer'
 					>
-						<FaInstagram className='hover:text-indigo-400' />
+						<FaInstagram className='text-4xl hover:text-orange-500' />
 					</a>
 					<a href='https://t.me' target='_blank' rel='noopener noreferrer'>
-						<FaXTwitter className='hover:text-sky-400' />
+						<FaXTwitter className='text-4xl hover:text-sky-400' />
 					</a>
 					<a href='https://t.me' target='_blank' rel='noopener noreferrer'>
-						<FaTiktok className='hover:text-sky-400' />
+						<FaTiktok className='text-4xl hover:text-cyan-300' />
 					</a>
 					<a href='https://t.me' target='_blank' rel='noopener noreferrer'>
-						<FaYoutube className='hover:text-sky-400' />
+						<FaYoutube className='text-4xl hover:text-red-600' />
 					</a>
 					<a href='https://t.me' target='_blank' rel='noopener noreferrer'>
-						<FaTelegram className='hover:text-sky-400' />
+						<FaTelegram className='text-4xl hover:text-sky-400' />
 					</a>
 				</div>
 			</div>
