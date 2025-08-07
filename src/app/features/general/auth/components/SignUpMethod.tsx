@@ -21,14 +21,14 @@ export default function SignupMethod() {
 			<div className='flex flex-col gap-3'>
 				<button
 					onClick={() => router.push('src/general/auth/components/SignUpForm')}
-					className='w-90 flex items-center justify-center mx-auto border border-2 border-black text-black-800 py-2 hover:bg-blue-500 transition rounded-full h-14'
+					className='w-90 flex items-center justify-center mx-auto  border-2 border-black text-black-800 py-2 hover:bg-blue-500 transition rounded-full h-14'
 				>
 					Continue with username{' '}
 					<span className='ml-4'>
 						<MdOutlineEmail />
 					</span>
 				</button>
-				<button className='w-90 flex items-center justify-center mx-auto border border-2 border-black text-gray-800 rounded-full hover:bg-blue-500 transition h-14'>
+				<button className='w-90 flex items-center justify-center mx-auto  border-2 border-black text-gray-800 rounded-full hover:bg-blue-500 transition h-14'>
 					Continue with Google{' '}
 					<span className='ml-4'>
 						<FaGoogle />

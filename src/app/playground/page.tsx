@@ -1,4 +1,3 @@
-
 import { ButtonPlayground } from '@/app/shared/components/playground/button-pg';
 import { Button } from '@/app/shared/components/ui/button';
 import { Navbar } from '@/app/shared/components/widgets/Navbar';
@@ -23,7 +22,7 @@ export default function Playground() {
 					</>
 				}
 			/>
-			<div className='min-h-screen p-8 bg-background'>
+			<div className="relative w-full min-h-screen p-8 bg-[#DFE7F2] bg-[url('/background.svg')] bg-cover bg-center bg-no-repeat antialiased">
 				<div className='max-w-6xl mx-auto space-y-12'>
 					<div className='text-center space-y-4'>
 						<h1 className='text-4xl font-bold tracking-tight'>

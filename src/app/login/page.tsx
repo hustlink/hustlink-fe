@@ -1,10 +1,11 @@
 'use client';
 
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Navbar } from '@/app/shared/components/widgets/NavbarTransparent';
-import LogInEmailForm from '../../components/LogInEmailForm';
-import LogInForm from '../../components/LogInForm';
+import LogInEmailForm from '../features/general/auth/components/LogInEmailForm';
+import LogInForm from '../features/general/auth/components/LogInForm';
 
 const inter = Inter({
 	variable: '--font-inter',
@@ -18,11 +19,19 @@ export default function LoginPage() {
 
 	return (
 		<div className="flex flex-col w-full min-h-screen bg-[#DFE7F2] bg-[url('/background.svg')] bg-cover bg-center bg-no-repeat antialiased">
-			<Navbar />
+			<Navbar
+				leftContent={
+					<>
+						<Link href='/' className='text-[19px] text-[#1F2937]'>
+							Hust<span className='text-[#2563EB]'>link</span>
+						</Link>
+					</>
+				}
+			/>
 			<LogInForm
 				onContinue={(email) => {
 					router.push(
-						`/features/general/auth/pages/login/withUserEmail?email=${encodeURIComponent(email)}`,
+						`/login/withUserEmail?email=${encodeURIComponent(email)}`,
 					);
 				}}
 			/>
