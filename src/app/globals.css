@@ -61,6 +61,8 @@
 	--surface: #F9FAFB;
 	--border: #F9FAFB;
 	--destructive: #DC2626;
+	--primary-color: #1e40af;
+  	--secondary-color: #f3f4f6;
 }
 
 .dark {

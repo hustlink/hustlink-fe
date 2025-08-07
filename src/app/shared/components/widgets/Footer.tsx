@@ -1,4 +1,5 @@
 // components/Footer.tsx
+'use client';
 
 import Image from 'next/image';
 
@@ -17,8 +18,8 @@ export default function Footer() {
 			<div className='max-w-7xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6'>
 				{/* Logo Column */}
 				<div className='flex items-start gap-x-3 mt-1'>
-					<Image src='/logo.svg' alt='Hustlink Logo' width={42} height={42} />
-					<span className='text-2xl font-semibold'>
+					<Image src='/logo.svg' alt='Hustlink Logo' width={79} height={78} />
+					<span className='text-3xl font-bold'>
 						Hust<span className='text-blue-500'>link</span>
 					</span>
 				</div>
@@ -115,7 +116,7 @@ export default function Footer() {
 						<FaFacebook className='hover:text-blue-400' />
 					</a>
 					<a
-						href='https://discord.com'
+						href='https://instagram.com'
 						target='_blank'
 						rel='noopener noreferrer'
 					>
