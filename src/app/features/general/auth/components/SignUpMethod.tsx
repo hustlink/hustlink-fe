@@ -50,15 +50,24 @@ export default function SignupMethod() {
 {step === 'select' && (
 			<div className='flex flex-col gap-3'>
 				<button
+<<<<<<< HEAD
 					onClick={() => setStep('form') }
 					className='w-[551px] h-[82px] bg-white opacity-60 border-2 border-gray-500 rounded-[15px] flex items-center justify-center mx-auto  py-2 hover:bg-blue-500 transition h-14'
+=======
+					onClick={() => router.push('src/general/auth/components/SignUpForm')}
+					className='w-90 flex items-center justify-center mx-auto  border-2 border-black text-black-800 py-2 hover:bg-blue-500 transition rounded-full h-14'
+>>>>>>> 41f3c0a5c5fc498a182b96f8183a6d56c6b8f1cc
 				>
 					Continue with username{' '}
 					<span className='w-[50px] ml-4'>
 						<MdOutlineEmail className='text-black w-[50px] h-[50px] bg-transparent'/>
 					</span>
 				</button>
+<<<<<<< HEAD
 				<button className='w-[551px] h-[82px] bg-white opacity-60 border-2 border-gray-500 rounded-[15px] flex items-center justify-center mx-auto  py-2 hover:bg-blue-500 transition h-14'>
+=======
+				<button className='w-90 flex items-center justify-center mx-auto  border-2 border-black text-gray-800 rounded-full hover:bg-blue-500 transition h-14'>
+>>>>>>> 41f3c0a5c5fc498a182b96f8183a6d56c6b8f1cc
 					Continue with Google{' '}
 					<span className='ml-4'>
 						<FaGoogle className='text-black w-[50px] h-[50px] bg-transparent'/>

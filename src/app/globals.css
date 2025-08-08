@@ -61,6 +61,8 @@
 	--surface: #F9FAFB;
 	--border: #F9FAFB;
 	--destructive: #DC2626;
+	--primary-color: #1e40af;
+  	--secondary-color: #f3f4f6;
 }
 
 .dark {
@@ -104,4 +106,31 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+/* styles/scrollbar.css or in a <style> tag */
+.custom-scrollbar {
+	scrollbar-width: thin; /* For Firefox */
+	scrollbar-color: rgba(156, 163, 175, 0.5) transparent; /* For Firefox: thumb and track */
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  	width: 8px; /* Slim scrollbar width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+	background: transparent; /* Transparent track for minimalism */
+	border-radius: 8px; /* Rounded track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background: rgba(156, 163, 175, 0.5); /* Soft gray, semi-transparent thumb */
+	border-radius: 8px; /* Rounded thumb */
+	border: 2px solid transparent; /* Adds padding effect */
+	background-clip: content-box; /* Ensures border doesn't affect thumb color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  	background: rgba(156, 163, 175, 0.8); /* Slightly darker on hover */
 }
