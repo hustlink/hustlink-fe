@@ -1,13 +1,9 @@
 'use client';
 
-import React from 'react';
 import '../../../../globals.css';
 import 'tw-animate-css';
 import Image from 'next/image';
-import { FaBell, FaEnvelope, FaUserCircle } from 'react-icons/fa';
-import { HiOutlineUserCircle } from 'react-icons/hi2';
 import { IoMdArrowDropdown } from 'react-icons/io';
-import { RxEnvelopeClosed } from 'react-icons/rx';
 
 export default function Navbar() {
 	return (

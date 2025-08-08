@@ -4,13 +4,7 @@ import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Navbar } from '@/app/shared/components/widgets/NavbarTransparent';
-import LogInEmailForm from '../features/general/auth/components/LogInEmailForm';
 import LogInForm from '../features/general/auth/components/LogInForm';
-
-const inter = Inter({
-	variable: '--font-inter',
-	subsets: ['latin'],
-});
 
 export default function LoginPage() {
 	//  const [step, setStep] = useState<'form' | 'email'>('form');

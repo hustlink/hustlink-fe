@@ -2,12 +2,9 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { MdKeyboardArrowLeft } from 'react-icons/md';
 import Navbar from '@/app/features/clients/hustlers/components/NavbarHustlers';
 import { Button } from '@/app/shared/components/ui/button';
 import Footer from '@/app/shared/components/widgets/Footer';
-import { Hustler } from '@/types/hustler';
 import HustlersList from './components/HustlersList';
 
 export default function HustlersPage() {

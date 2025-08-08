@@ -1,16 +1,10 @@
 'use client';
 
-import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
 import LogInEmailForm from '@/app/features/general/auth/components/LogInEmailForm';
 import { Navbar } from '@/app/shared/components/widgets/NavbarTransparent';
-
-const inter = Inter({
-	variable: '--font-inter',
-	subsets: ['latin'],
-});
 
 export default function LoginWithUserEmailPage() {
 	const searchParams = useSearchParams();
