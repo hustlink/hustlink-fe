@@ -2,15 +2,17 @@ import SignUpMethod from '@/app/features/general/auth/components/SignUpMethod';
 
 export default function SignupPage() {
 	return (
-		<div className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 p-4'>
+		<div className='flex flex-col items-center justify-center bg-[#DFE7F2]'>
+			<div className='flex flex-col mb-2 justify-center items-center'>
 			{/* Page Title */}
 			<h1 className='text-3xl md:text-4xl font-bold text-gray-800 mb-2'>
-				Create Your Account
+				Sign up
 			</h1>
 			<h1 className='text-sm md:text-4xl font-bold text-gray-800 mb-2'>
-				Already have account? <span className='text-blue-500'>Log in here</span>
+				Already have account? <a href='/features/general/auth/pages/login' className='text-blue-500'>Log in here</a>
 			</h1>
-			<div className='min-h-screen flex items-center justify-center bg-gray-100'>
+			</div>
+			<div className='flex justify-center bg-[#DFE7F2] shadow-xl rounded-xl w-[800px] h-full-screen my-auto'>
 				<SignUpMethod />
 			</div>
 		</div>

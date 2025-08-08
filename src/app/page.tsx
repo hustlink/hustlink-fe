@@ -11,7 +11,7 @@ export default function Home() {
 				<Navbar
 					leftContent={<Link href='/' className='text-blue-600'></Link>}
 					rightContent={
-						<Link
+						<a
 							href={'/features/general/auth/pages/login'}
 							className='cursor-pointer'
 						>
@@ -22,7 +22,7 @@ export default function Home() {
 							>
 								Login
 							</Button>
-						</Link>
+						</a>
 					}
 				/>
 			</div>
