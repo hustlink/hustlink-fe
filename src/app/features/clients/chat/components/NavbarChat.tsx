@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../../globals.css';
 import 'tw-animate-css';
 import Image from 'next/image';

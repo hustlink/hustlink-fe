@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import { useEffect, useMemo, useState } from 'react';
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import { useMemo, useState } from 'react';
 import { Button } from '@/app/shared/components/ui/button';
 import { Hustler } from '@/types/hustler';
 import HustlerGrid from './HustlerGrid';
@@ -205,7 +204,7 @@ export default function HustlersList() {
 	// State untuk UI
 	const [showSortDropdown, setShowSortDropdown] = useState<boolean>(false);
 	const [showBudgetDropdown, setShowBudgetDropdown] = useState<boolean>(false);
-	const [loading, setLoading] = useState<boolean>(false);
+	const [loading, _setLoading] = useState<boolean>(false);
 
 	// Computed filtered dan sorted data menggunakan useMemo untuk performance
 	const filteredAndSortedHustlers = useMemo(() => {
@@ -324,7 +323,10 @@ export default function HustlersList() {
 								}
 								iconPosition='right'
 								className='h-[48px] z-50 bg-white hover:bg-gray-50 rounded-[12px] shadow-muted-foreground text-md text-[#1F2937] font-normal hover:text-[#1F2937] tracking-[0.08em] cursor-pointer'
-								onClick={() => setShowSortDropdown(!showSortDropdown)}
+								onClick={() => {
+									setShowSortDropdown(!showSortDropdown);
+									setShowBudgetDropdown(false);
+								}}
 							>
 								{getSortLabel()}
 							</Button>
@@ -369,7 +371,10 @@ export default function HustlersList() {
 								}
 								iconPosition='right'
 								className='h-[48px] z-50 bg-white hover:bg-gray-50 rounded-[12px] shadow-muted-foreground text-md text-[#1F2937] font-normal hover:text-[#1F2937] tracking-[0.08em] cursor-pointer'
-								onClick={() => setShowBudgetDropdown(!showBudgetDropdown)}
+								onClick={() => {
+									setShowBudgetDropdown(!showBudgetDropdown);
+									setShowSortDropdown(false);
+								}}
 							>
 								{getBudgetLabel()}
 							</Button>
