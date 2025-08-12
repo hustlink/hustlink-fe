@@ -16,51 +16,51 @@ export default function AddProjectSection() {
 					</h2>
 
 					<ul className='space-y-6'>
-						<li className='flex items-start gap-4'>
+						<li className='flex items-start gap-7'>
 							<img
 								src='/Vector (3).svg'
 								alt='lock'
-								className='w-[34px] h-[45px] mt-1'
+								className='w-[34px] h-[45px] mt-1 ml-[6px]'
 							/>
 							<div>
-								<h4 className='font-semibold text-3xl text-gray-800'>
+								<h4 className='mb-4 font-semibold text-3xl text-gray-800'>
 									Access to Local Talent
 								</h4>
-								<p className='text-gray-800 text-lg'>
+								<p className='text-gray-800 text-xl max-w-[548px]'>
 									Connect with skilled Indonesian freelancers for quality work
 									at competitive rates.
 								</p>
 							</div>
 						</li>
 
-						<li className='flex items-start gap-4'>
+						<li className='flex items-start gap-6'>
 							<img
 								src='/Vector (2).svg'
 								alt='lock'
 								className='w-[45px] h-[37px] mt-1'
 							/>
 							<div>
-								<h4 className='font-semibold text-3xl text-gray-800'>
+								<h4 className='mb-4 font-semibold text-3xl text-gray-800'>
 									Transparent & Secure Payment
 								</h4>
-								<p className='text-gray-800 text-lg'>
+								<p className='text-gray-800 text-xl max-w-[548px]'>
 									Escrow system ensures you only pay when the work is delivered
 									as agreed.
 								</p>
 							</div>
 						</li>
 
-						<li className='flex items-start gap-4'>
+						<li className='flex items-start gap-7'>
 							<img
 								src='/Vector (4).svg'
 								alt='lock'
-								className='w-[35px] h-[38px] mt-1'
+								className='w-[35px] h-[38px] mt-1 ml-[3px]'
 							/>
 							<div>
-								<h4 className='font-semibold text-3xl text-gray-800'>
+								<h4 className='mb-4 font-semibold text-3xl text-gray-800'>
 									Direct Communication
 								</h4>
-								<p className='text-gray-800 text-lg'>
+								<p className='text-gray-800 text-xl max-w-[548px]'>
 									Chat directly with freelancers to clarify details and speed up
 									collaboration.
 								</p>
@@ -70,7 +70,7 @@ export default function AddProjectSection() {
 				</div>
 
 				{/* Right CTA Button */}
-				<div className='mt-[180px] flex-[42_1_0%] flex justify-center'>
+				<div className=' flex-[42_1_0%] flex justify-center'>
 					<button className='bg-blue-600 text-white rounded-[60px] px-8 py-16 shadow-xl hover:bg-blue-700 transition-all duration-300 w-[482px] h-[356px] flex flex-col justify-center items-center text-center'>
 						<div className='w-[101px] h-[113px] mb-4 relative'>
 							<Image
