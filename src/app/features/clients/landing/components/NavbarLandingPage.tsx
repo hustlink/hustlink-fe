@@ -1,13 +1,9 @@
 'use client';
 
-import React from 'react';
 import '../../../../globals.css';
 import 'tw-animate-css';
 import Image from 'next/image';
-import { FaBell, FaEnvelope, FaUserCircle } from 'react-icons/fa';
-import { HiOutlineUserCircle } from 'react-icons/hi2';
 import { IoMdArrowDropdown } from 'react-icons/io';
-import { RxEnvelopeClosed } from 'react-icons/rx';
 
 export default function Navbar() {
 	return (
@@ -19,7 +15,13 @@ export default function Navbar() {
 			<div className='flex items-center gap-6'>
 				{/* Logo dan Brand Name */}
 				<div className='flex items-center gap-2 w-[62px] h-[61px]'>
-					<Image src='/logo.svg' alt='Logo' width={62} height={61} priority />
+					<Image
+						src='/logo-navbar.svg'
+						alt='Logo'
+						width={62}
+						height={61}
+						priority
+					/>
 				</div>
 
 				{/* Menu */}

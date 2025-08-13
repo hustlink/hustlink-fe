@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+
 import React, { useState } from 'react';
 
 interface NavbarProps {
@@ -14,19 +15,19 @@ const Navbar: React.FC<NavbarProps> = ({ leftContent, rightContent }) => {
 
 	return (
 		<header className='w-full bg-white shadow-md z-50 relative'>
-			<nav className='mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between'>
+			<nav className='mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between text-[#1F2937]'>
 				{/* Left section */}
-				<div className='flex items-center space-x-1.5 text-253140 font-bold'>
-					<Image
-						src='/logo-navbar.svg'
-						alt='logo'
-						width={80}
-						height={80}
-						unoptimized
-					/>
-					<a href='/' className='text-[19px]'>
-						Hust<span className='text-blue-600'>link</span>
-					</a>
+				<div className='flex items-center space-x-1.5 font-bold'>
+					<Link href='/'>
+						<Image
+							src='/logo-navbar.svg'
+							alt='logo'
+							width={80}
+							height={80}
+							unoptimized
+							className='w-[80px] h-auto'
+						/>
+					</Link>
 					{/* Desktop nav links */}
 					<div className='hidden md:flex items-center space-x-4'>
 						{leftContent}

@@ -11,10 +11,7 @@ export default function Home() {
 				<Navbar
 					leftContent={<Link href='/' className='text-blue-600'></Link>}
 					rightContent={
-						<Link
-							href={'/features/general/auth/pages/login'}
-							className='cursor-pointer'
-						>
+						<Link href={'/login'} className='cursor-pointer'>
 							<Button
 								variant={'default'}
 								size={'default'}
@@ -26,8 +23,8 @@ export default function Home() {
 					}
 				/>
 			</div>
-			<div className='font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 '>
-				<main className='flex flex-col gap-[32px] row-start-2 items-center sm:items-start'>
+			<div className=' grid grid-rows-[10px_1fr_10px] items-center justify-items-center min-h-screen p-2 gap-6 sm:p-6 '>
+				<main className='flex flex-col gap-[16px] row-start-2 items-center sm:items-start'>
 					<Image
 						className='dark:invert'
 						src='/next.svg'
@@ -36,7 +33,7 @@ export default function Home() {
 						height={38}
 						priority
 					/>
-					<ol className='font-mono list-inside list-decimal text-sm/6 text-center sm:text-left'>
+					<ol className='list-inside list-decimal text-sm/6 text-center sm:text-left'>
 						<li className='mb-2 tracking-[-.01em]'>
 							Get started by editing{' '}
 							<code className='bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded'>
@@ -55,6 +52,12 @@ export default function Home() {
 								Button Playground
 							</Button>
 						</Link>
+						<Link href={'/client'} className='cursor-pointer'>
+							<Button>Client Page</Button>
+						</Link>
+					</div>
+
+					<div className='flex gap-4 items-center flex-col sm:flex-row'>
 						<a
 							className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-purple-500 text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto'
 							href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'

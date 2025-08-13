@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import '../../../../globals.css';
 import Image from 'next/image';
 import { useState } from 'react';

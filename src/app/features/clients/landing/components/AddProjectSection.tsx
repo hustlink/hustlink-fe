@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { FaComments, FaKey, FaLock } from 'react-icons/fa';
 
 export default function AddProjectSection() {
 	return (
