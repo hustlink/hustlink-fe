@@ -8,7 +8,7 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 export default function Navbar() {
 	return (
 		<nav
-			className='mx-auto h-[65px] px-4 sm:px-6 py-3 border-b flex items-center justify-between bg-white shadow-sm opacity-100'
+			className='mx-auto h-[76px] px-4 sm:px-6 py-3 border-b flex items-center justify-between bg-white shadow-sm opacity-100'
 			style={{ transform: 'rotate(0deg)' }}
 		>
 			{/* Kiri: Logo dan Menu */}
