@@ -2,11 +2,10 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import HustlersList from '@/app/features/clients/hustlers/components/HustlersList';
-
-import Navbar from '@/app/features/clients/hustlers/components/NavbarHustlers';
+import { HustlersList } from '@/app/client/show-hustlers/components/HustlerList';
+import { NavbarProfile } from '@/app/client/show-hustlers/components/NavbarProfile';
 import { Button } from '@/app/shared/components/ui/button';
-import Footer from '@/app/shared/components/widgets/Footer';
+import { Footer } from '@/app/shared/components/widgets/Footer';
 
 const steps = [
 	{
@@ -34,7 +33,7 @@ const steps = [
 export default function HustlersPage() {
 	return (
 		<div className="flex flex-col w-full min-h-screen bg-[#DFE7F2] bg-[url('/image/client/hustler-background.svg')] bg-center bg-no-repeat bg-cover antialiased">
-			<Navbar />
+			<NavbarProfile />
 			<div className='flex flex-col items-center justify-center w-full max-w-10xl mx-auto px-4 sm:px-6 lg:px-16'>
 				<div className='flex w-full justify-start items-center'>
 					<Link href='/features/clients/hustlers'>
