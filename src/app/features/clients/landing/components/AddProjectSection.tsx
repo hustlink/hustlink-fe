@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export default function AddProjectSection() {
 	return (
-		<section className='w-full bg-[#c8d7f0] py-16'>
+		<section className='w-full bg-[#c8d7f0] py-2'>
 			<div className='max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12 mt-[94px] mb-[121px] ml-[109px]'>
 				{/* Left Content */}
 				<div className='flex-1flex-[58_1_0%]'>
-					<h2 className='text-4xl md:text-6xl font-bold mb-8 text-gray-800'>
+					<h2 className='text-4xl md:text-6xl font-bold text-gray-800'>
 						Start your project now
 						<br />
 						with many <span className='text-blue-600'>advantage!</span>
@@ -70,7 +70,7 @@ export default function AddProjectSection() {
 
 				{/* Right CTA Button */}
 				<div className=' flex-[42_1_0%] flex justify-center'>
-					<button className='bg-blue-600 text-white rounded-[60px] px-8 py-16 shadow-xl hover:bg-blue-700 transition-all duration-300 w-[482px] h-[356px] flex flex-col justify-center items-center text-center'>
+					<button className='bg-blue-600 text-white rounded-[60px] px-8 py-2 shadow-xl hover:bg-blue-700 transition-all duration-300 w-[482px] h-[356px] flex flex-col justify-center items-center text-center'>
 						<div className='w-[101px] h-[113px] mb-4 relative'>
 							<Image
 								src='/Group (1).svg'
