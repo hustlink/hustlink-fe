@@ -38,3 +38,5 @@ export default function UploadCVPage() {
 		</section>
 	);
 }
+
+export { UploadCVPage };
