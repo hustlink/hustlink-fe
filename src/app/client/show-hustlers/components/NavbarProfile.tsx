@@ -7,6 +7,7 @@ import { GoBell } from 'react-icons/go';
 import { MdOutlineKeyboardArrowDown, MdOutlineMail } from 'react-icons/md';
 
 import { Navbar } from '@/app/shared/components/widgets/Navbar';
+import ProfileMenu from '@/app/shared/components/widgets/ProfileMenu';
 
 export default function NavbarProfile() {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -68,6 +69,10 @@ export default function NavbarProfile() {
 					/>
 					<MdOutlineMail className='text-4xl hover:text-[#2563EB] cursor-pointer' />
 					<CgProfile className='text-4xl hover:text-[#2563EB] cursor-pointer' />
+					<ProfileMenu
+						avatarUrl='/image/client/hustler-profile.svg'
+						name='wahed ganteng'
+					/>
 				</>
 			}
 		/>

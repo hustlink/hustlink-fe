@@ -22,10 +22,10 @@ const Navbar: React.FC<NavbarProps> = ({ leftContent, rightContent }) => {
 						<Image
 							src='/logo-navbar.svg'
 							alt='logo'
-							width={80}
-							height={80}
+							width={50}
+							height={48}
 							unoptimized
-							className='w-[80px] h-auto'
+							className='w-[50px] h-auto'
 						/>
 					</Link>
 					{/* Desktop nav links */}

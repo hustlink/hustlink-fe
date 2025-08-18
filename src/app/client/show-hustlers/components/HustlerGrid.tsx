@@ -1,7 +1,7 @@
-// components/HustlerGrid.tsx
+// app/client/show-hustlers/components/HustlerGrid.tsx
 
 import { HustlerCard } from '@/app/client/show-hustlers/components/HustlerCard';
-import { Hustler } from '@/types/hustler';
+import { Hustler } from '@/types/entities/hustler';
 
 type Props = {
 	data: Hustler[];
