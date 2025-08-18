@@ -67,6 +67,15 @@ export default function Home() {
 							<Link href={'/freelancer/profile/addWorkField'}>
 								<Button>Add Work Field</Button>
 							</Link>
+							<Link href={'/freelancer/profile/updateProfile'}>
+								<Button>Update Profile</Button>
+							</Link>
+							<Link href={'/freelancer/profile/addPhotoPage'}>
+								<Button>Add Photo</Button>
+							</Link>
+							<Link href={'/freelancer/profile/addBioPage'}>
+								<Button>Add Bio</Button>
+							</Link>
 						</div>
 					</div>
 
