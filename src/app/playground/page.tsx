@@ -1,7 +1,7 @@
 import { ButtonPlayground } from '@/app/shared/components/playground/button-pg';
 import { Button } from '@/app/shared/components/ui/button';
 import { Navbar } from '@/app/shared/components/widgets/Navbar';
-import BenefitSection from '../features/freelancer/landing/components/BenefitsSection';
+// import BenefitSection from '../features/freelancer/landing/components/BenefitsSection';
 import Footer from '../shared/components/widgets/Footer';
 
 export default function Playground() {
@@ -53,7 +53,7 @@ export default function Playground() {
 					</section>
 				</div>
 			</div>
-			<BenefitSection />
+			{/* <BenefitSection /> */}
 			<Footer />
 		</>
 	);
