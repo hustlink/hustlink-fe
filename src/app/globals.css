@@ -7,6 +7,7 @@
 @theme inline {
 	--color-background: var(--background);
 	--color-background-light: var(--background-light);
+	--color-secondary-background: var(--secondary-background);
 	--color-surface: var(--surface);
 	--color-foreground: var(--foreground);
 	--font-sans: var(--font-geist-sans);
@@ -63,6 +64,8 @@
 	--destructive: #DC2626;
 	--primary-color: #1e40af;
   	--secondary-color: #f3f4f6;
+	--secondary-background: #DFE7F2;
+	--secondary-foreground: #F97316;
 }
 
 .dark {
