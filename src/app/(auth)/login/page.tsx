@@ -3,7 +3,7 @@
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { LogInForm } from '@/app/auth/login/components/LogInForm';
+import { LogInForm } from '@/app/(auth)/login/components/LogInForm';
 import { Navbar } from '@/app/shared/components/widgets/NavbarTransparent';
 
 export default function LoginPage() {
