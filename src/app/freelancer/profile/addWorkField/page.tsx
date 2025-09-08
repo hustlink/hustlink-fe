@@ -58,24 +58,24 @@ export default function AddWorkFieldPage() {
     <>
       <NavbarProfile />
       
-      <div className="ml-[86px] min-h-screen bg-background pb-24 mr-[86px]"> {/* Added pb-24 for footer space */}
-        <div className="mx-auto px-8 py-12">
+      <div className="min-h-screen bg-background pb-24"> {/* Added pb-24 for footer space */}
+        <div className="mx-auto px-[86px] py-[47px]">
           {/* Header */}
-          <div className="mb-12">
-            <h1 className="text-[48px] font-bold text-gray-900 leading-tight mb-6">
+          <div className="mb-[20px]">
+            <h1 className="text-[48px] font-bold text-text-primary leading-tight mb-[25px]">
               Set up what kind of work you want to do
             </h1>
-            <p className="text-[20px] text-gray-600 mb-8">
+            <p className="text-[25px] font-bold text-text-primary mb-[20px]">
               You can change these choices later on.
             </p>
-            <div className="w-full h-[1px] bg-gray-300"></div>
+            <div className="w-full h-[1px] bg-gray-600"></div>
           </div>
 
           {/* Content Grid */}
           <div className="grid grid-cols-2 gap-0">
             {/* Left Column - Categories */}
-            <div className="pr-8">
-              <h2 className="text-[24px] font-semibold text-gray-900 mb-8">
+            <div className="pr-8 max-w-[338px]">
+              <h2 className="text-[24px] font-semibold text-text-primary mb-8">
                 Select category
               </h2>
               <div className="space-y-0">
@@ -85,8 +85,8 @@ export default function AddWorkFieldPage() {
                     onClick={() => handleCategorySelect(category)}
                     className={`w-full text-left py-4 px-0 transition-colors duration-200 ${
                       selectedCategory === category
-                        ? 'text-blue-500'
-                        : 'text-gray-700 hover:text-blue-400'
+                        ? 'text-blue-600'
+                        : 'text-blue-400 hover:text-blue-600'
                     } ${index !== categories.length - 1 ? 'border-b border-gray-200' : ''}`}
                   >
                     <span className="text-[18px] font-normal">{category}</span>
@@ -97,11 +97,11 @@ export default function AddWorkFieldPage() {
 
             {/* Vertical Divider */}
             <div className="relative">
-              <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gray-300"></div>
+              <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gray-600"></div>
               
               {/* Right Column - Specialties */}
               <div className="pl-8">
-                <h2 className="text-[24px] font-semibold text-gray-900 mb-8">
+                <h2 className="text-[24px] font-semibold text-text-primary mb-8">
                   Select maximum 3 specialties
                 </h2>
                 {selectedCategory ? (
@@ -113,16 +113,16 @@ export default function AddWorkFieldPage() {
                         disabled={!selectedSpecialties.includes(specialty) && selectedSpecialties.length >= 3}
                         className={`w-full text-left py-4 px-0 transition-colors duration-200 ${
                           selectedSpecialties.includes(specialty)
-                            ? 'text-blue-500'
+                            ? 'text-blue-600'
                             : selectedSpecialties.length >= 3
-                            ? 'text-gray-400 cursor-not-allowed'
-                            : 'text-gray-700 hover:text-blue-400'
+                            ? 'text-gray-600 cursor-not-allowed'
+                            : 'text-gray-700 hover:text-blue-600'
                         } ${index !== specialties[selectedCategory as CategoryType]?.length - 1 ? 'border-b border-gray-200' : ''}`}
                       >
                         <div className="flex items-center justify-between">
                           <span className="text-[18px] font-normal">{specialty}</span>
                           {selectedSpecialties.includes(specialty) && (
-                            <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
                           )}
