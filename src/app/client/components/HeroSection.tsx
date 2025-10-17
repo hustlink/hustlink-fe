@@ -16,7 +16,7 @@ export default function HeroSection() {
 				</h2>
 			</div>
 
-			<div className='mb-8 flex flex-col md:flex-row items-start  gap-8'>
+			<div className='flex flex-col md:flex-row items-start  gap-8'>
 				{/* Kiri: Heading, Tab Buttons, Search */}
 				<div className='mt-7  md:w-2/3 w-full flex flex-col gap-6'>
 					{/* h3 */}
