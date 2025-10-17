@@ -1,11 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { HustlersList } from '@/app/client/show-hustlers/components/HustlerList';
-import { NavbarProfile } from '@/app/client/show-hustlers/components/NavbarProfile';
-import { Button } from '@/app/shared/components/ui/button';
+import Navbar from '@/app/client/show-hustlers/components/NavbarProfile';
 import { Footer } from '@/app/shared/components/widgets/Footer';
+import BackHeader from '../components/BackHeader';
 
 const steps = [
 	{
@@ -33,27 +32,9 @@ const steps = [
 export default function HustlersPage() {
 	return (
 		<div className="flex flex-col w-full min-h-screen bg-[#DFE7F2] bg-[url('/image/client/hustler-background.svg')] bg-center bg-no-repeat bg-cover antialiased">
-			<NavbarProfile />
-			<div className='flex flex-col items-center justify-center w-full max-w-10xl mx-auto px-4 sm:px-6 lg:px-16'>
-				<div className='flex w-full justify-start items-center'>
-					<Link href='/features/clients/hustlers'>
-						<Button
-							variant={'ghost'}
-							icon={
-								<Image
-									src='/icon/arrow-left.svg'
-									alt='rocket'
-									width={30}
-									height={40}
-									className='w-6 h-6 sm:w-[30px] sm:h-[40px]'
-								/>
-							}
-							className='w-auto h-auto mt-16 mx-auto gap-6 shadow-muted-foreground bg-transparent hover:bg-transparent text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-[#1F2937] hover:text-[#1F2937] cursor-pointer'
-						>
-							Full Stack Web Developer
-						</Button>
-					</Link>
-				</div>
+			<Navbar />
+			<BackHeader />
+			<div className='flex flex-col max-w-screen-2xl items-center justify-center w-full max-w-10xl mx-auto px-4 sm:px-6 lg:px-16'>
 				<HustlersList />
 			</div>
 			<div className='grid grid-cols-2 w-full bg-[#B7CAEF] py-16 px-20 gap-x-8'>

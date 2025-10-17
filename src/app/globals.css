@@ -1,12 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @tailwind utilities;
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
 	--color-background: var(--background);
+	--color-background-secondary: var(--background-secondary);
+	--color-background-tertiary: var(--background-tertiary);
 	--color-background-light: var(--background-light);
+	--color-secondary: var(--secondary);
+	--color-secondary-light: var(--secondary-light);
 	--color-secondary-background: var(--secondary-background);
 	--color-surface: var(--surface);
 	--color-foreground: var(--foreground);
@@ -52,18 +55,20 @@
 
 :root {
 	--radius: 0.625rem;
-	--primary: #124B57;
-	--background: #E0EFF1;
-	--secondary: #2563EB;
-	--secondary-light: #E6EEFD;
-	--text-primary: #1F2937;
-	--text-secondary: #6B7280;
-	--background-light: #FFFFFF;
-	--surface: #F9FAFB;
-	--border: #6B7280;
-	--destructive: #DC2626;
+	--primary: #124b57;
+	--background: #DFE7F2;
+	--background-secondary: #B7CAEF;
+	--background-tertiary: #e0eff1;
+	--secondary: #2563eb;
+	--secondary-light: #e6eefd;
+	--text-primary: #1f2937;
+	--text-secondary: #6b7280;
+	--background-light: #ffffff;
+	--surface: #f9fafb;
+	--border: #f9fafb;
+	--destructive: #dc2626;
 	--primary-color: #1e40af;
-  	--secondary-color: #f3f4f6;
+	--secondary-color: #f3f4f6;
 	--secondary-background: #DFE7F2;
 	--secondary-foreground: #F97316;
 }
@@ -109,6 +114,66 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+
+	/* #region  /**=========== Typography =========== */
+	.j1 {
+		@apply text-4xl font-bold;
+	}
+	.j2 {
+		@apply text-3xl font-bold;
+	}
+	.h1 {
+		@apply text-2xl font-semibold;
+	}
+	.h2 {
+		@apply text-xl font-semibold;
+	}
+	.h3 {
+		@apply text-lg font-semibold;
+	}
+	.h4 {
+		@apply text-base font-bold;
+	}
+	.h5 {
+		@apply text-base font-semibold;
+	}
+	.h6 {
+		@apply text-sm font-semibold;
+	}
+	.s1 {
+		@apply text-lg font-medium;
+	}
+	.s2 {
+		@apply text-base font-medium;
+	}
+	.s3 {
+		@apply text-sm font-medium;
+	}
+	.s4 {
+		@apply text-xs font-medium;
+	}
+	.b1 {
+		@apply text-lg;
+	}
+	.b2 {
+		@apply text-base;
+	}
+	.b3 {
+		@apply text-sm font-normal;
+	}
+	.c1 {
+		@apply text-xs;
+	}
+	.c2 {
+		@apply text-[11px] leading-[14px];
+	}
+	/* #endregion  /**======== Typography =========== */
+
+	.layout {
+		/* 1100px */
+		max-width: 1200px;
+		@apply mx-auto w-11/12;
+	}
 }
 
 /* styles/scrollbar.css or in a <style> tag */
@@ -119,7 +184,7 @@
 
 /* For Webkit browsers (Chrome, Safari, Edge) */
 .custom-scrollbar::-webkit-scrollbar {
-  	width: 8px; /* Slim scrollbar width */
+	width: 8px; /* Slim scrollbar width */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -135,5 +200,5 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  	background: rgba(156, 163, 175, 0.8); /* Slightly darker on hover */
+	background: rgba(156, 163, 175, 0.8); /* Slightly darker on hover */
 }
