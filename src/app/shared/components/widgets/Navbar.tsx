@@ -2,19 +2,26 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import classNames from 'classnames';
 
 import React, { useState } from 'react';
 
 interface NavbarProps {
 	leftContent?: React.ReactNode;
 	rightContent?: React.ReactNode;
+	transparent?: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ leftContent, rightContent }) => {
+const Navbar: React.FC<NavbarProps> = ({ leftContent, rightContent, transparent = false}) => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	return (
-		<header className='w-full bg-white shadow-md z-50 relative'>
+		<header className={classNames("w-full shadow-md z-50 relative", {
+			'bg-transparent': transparent,
+			'antialiased': transparent,
+			'bg-no-repeat': transparent,
+			'bg-white': !transparent,
+		})}>
 			<nav className='mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between text-[#1F2937]'>
 				{/* Left section */}
 				<div className='flex items-center space-x-1.5 font-bold'>
@@ -53,7 +60,11 @@ const Navbar: React.FC<NavbarProps> = ({ leftContent, rightContent }) => {
 
 			{/* Mobile dropdown menu */}
 			{isMobileMenuOpen && (
-				<div className='md:hidden bg-white shadow-md px-4 py-3 space-y-4'>
+				<div className={classNames("md:hidden px-4 py-3 space-y-4", {
+						'bg-transparent': transparent,
+						'bg-white': !transparent,
+						'shadow-md': !transparent,
+					})} >
 					{leftContent && (
 						<div className='flex flex-col space-y-2'>{leftContent}</div>
 					)}

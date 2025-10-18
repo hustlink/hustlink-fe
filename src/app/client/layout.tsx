@@ -12,17 +12,17 @@ export default async function ClientLayout({
 }) {
 	// ⚠️ DEV BYPASS: comment-kan guard saat DEV
 
-	const session = await getServerSession(authOptions);
+	// const session = await getServerSession(authOptions);
 
-	// Redirect if not authenticated
-	if (!session) {
-		redirect('/login');
-	}
+	// // Redirect if not authenticated
+	// if (!session) {
+	// 	redirect('/login');
+	// }
 
-	// Redirect if not client
-	if (session.user.userType !== 'client') {
-		redirect('/freelancer');
-	}
+	// // Redirect if not client
+	// if (session.user.userType !== 'client') {
+	// 	redirect('/freelancer');
+	// }
 
 	// Your existing layout structure (keep it as is)
 	return (

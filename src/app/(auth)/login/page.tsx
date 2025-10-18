@@ -5,7 +5,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import { EssentialCookieNotice } from '@/app/shared/components/EssentialCookieNotice';
 import Seo from '@/app/shared/components/Seo';
-import { Navbar } from '@/app/shared/components/widgets/NavbarTransparent';
+import { Navbar } from '@/app/shared/components/widgets/Navbar';
 import LogInForm from './components/LogInForm';
 
 export default async function LoginPage() {
@@ -28,6 +28,7 @@ export default async function LoginPage() {
 		<div className="flex flex-col w-full min-h-screen bg-[#DFE7F2] bg-[url('/background.svg')] bg-cover bg-center bg-no-repeat antialiased">
 			<Seo templateTitle='Login' />
 			<Navbar
+				transparent={true}
 				leftContent={
 					<>
 						<Link href='/' className='text-2xl text-[#1F2937]'>

@@ -13,18 +13,18 @@ export default async function ClientPage() {
 	const session = await getServerSession(authOptions);
 
 	// Server-side protection
-	if (!session || session.user?.userType !== 'client') {
-		redirect('/login');
-	}
+	// if (!session || session.user?.userType !== 'client') {
+	// 	redirect('/login');
+	// }
 
 	return (
-		<div className='max-w-3xl mx-auto py-10 px-6'>
+		<div className=' mx-auto overflow-hidden'>
 			<NavbarLanding />
-			<h1 className='text-2xl font-semibold'>Welcome, {session.user.name}!</h1>
+			{/* <h1 className='text-2xl font-semibold'>Welcome, {session.user.name}!</h1>
 			<p className='mt-2'>User Type: {session.user.userType}</p>
 			<p className='mt-1'>
 				Profile Status: {session.user.isCompleted ? 'Complete' : 'Incomplete'}
-			</p>
+			</p> */}
 			<HeroSection />
 			<CategoryList />
 			<AddProjectSection />

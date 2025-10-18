@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import Seo from '@/app/shared/components/Seo';
 import Typography from '../shared/components/ui/Typography';
-import { Navbar } from '../shared/components/widgets/NavbarTransparent';
+import { Navbar } from '../shared/components/widgets/Navbar';
 
 export default function PrivacyPolicyPage() {
 	return (
 		<div className="flex flex-col w-full min-h-screen bg-[#DFE7F2] bg-[url('/background.svg')] bg-cover bg-center bg-no-repeat text-gray-800">
 			<Seo templateTitle='Privacy Policy' />
 			<Navbar
+				transparent={true}
 				leftContent={
 					<>
 						<Link href='/' className='text-lg text-[#1F2937]'>

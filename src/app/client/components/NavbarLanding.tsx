@@ -1,6 +1,6 @@
 'use client';
 
-import 'tw-animate-css';
+// import 'tw-animate-css';
 import Image from 'next/image';
 import { IoMdArrowDropdown } from 'react-icons/io';
 
