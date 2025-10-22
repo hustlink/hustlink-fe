@@ -19,13 +19,16 @@ const AddTaskDialog: FC<AddTaskDialogProps> = ({
     closeDialog
 }) => {
     const [openToDate, setOpenToDate] = useState(false)
-    const [date, setDate] = useState<Date | undefined>(undefined)
+    const [openFromDate, setOpenFromDate] = useState(false)
+    const [toDate, setToDate] = useState<Date | undefined>(undefined)
+    const [fromDate, setFromDate] = useState<Date | undefined>(undefined)
+
     return (
         <Dialog open={open} onOpenChange={closeDialog}>
             <form>
                 <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
-                    <DialogTitle>Edit profile</DialogTitle>
+                    <DialogTitle>Add New Task</DialogTitle>
                     <DialogDescription>
                     Make changes to your task here. Click save when you&apos;re done.
                     </DialogDescription>
@@ -37,7 +40,29 @@ const AddTaskDialog: FC<AddTaskDialogProps> = ({
                     </div>
                     <div className="grid gap-3">
                         <Label htmlFor="fromDate">From</Label>
-                        <Input id="fromDate" name="fromDate" />
+                        <Popover open={openFromDate} onOpenChange={setOpenFromDate}>
+                            <PopoverTrigger asChild>
+                            <Button
+                                variant="outline"
+                                id="fromDate"
+                                className="w-48 justify-between font-normal w-full border-solid border border-gray-900 rounded-md text-left p-2"
+                            >
+                                {fromDate ? fromDate.toLocaleDateString() : "Select date"}
+                                <ChevronDownIcon />
+                            </Button>
+                            </PopoverTrigger>
+                            <PopoverContent className="w-auto overflow-hidden p-0 bg-white" align="start">
+                            <Calendar
+                                mode="single"
+                                selected={fromDate}
+                                captionLayout="dropdown"
+                                onSelect={(date) => {
+                                    setFromDate(date)
+                                    setOpenToDate(false)
+                                }}
+                            />
+                            </PopoverContent>
+                        </Popover>
                     </div>
                     <div className="grid gap-3">
                         <Label htmlFor="toDate">To</Label>
@@ -48,17 +73,17 @@ const AddTaskDialog: FC<AddTaskDialogProps> = ({
                                 id="toDate"
                                 className="w-48 justify-between font-normal w-full border-solid border border-gray-900 rounded-md text-left p-2"
                             >
-                                {date ? date.toLocaleDateString() : "Select date"}
+                                {toDate ? toDate.toLocaleDateString() : "Select date"}
                                 <ChevronDownIcon />
                             </Button>
                             </PopoverTrigger>
                             <PopoverContent className="w-auto overflow-hidden p-0 bg-white" align="start">
                             <Calendar
                                 mode="single"
-                                selected={date}
+                                selected={toDate}
                                 captionLayout="dropdown"
                                 onSelect={(date) => {
-                                    setDate(date)
+                                    setToDate(date)
                                     setOpenToDate(false)
                                 }}
                             />
