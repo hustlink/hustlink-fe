@@ -1,3 +1,4 @@
+'use client'
 // app/client/show-hustlers/components/HustlerList.tsx
 import Image from 'next/image';
 import { useEffect, useMemo, useRef, useState } from 'react';

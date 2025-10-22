@@ -9,7 +9,7 @@ interface ProvidersProps {
 }
 
 export default function Providers({ children }: ProvidersProps) {
-	return (
+return (
 		<SessionProvider
 			basePath='/api/auth'
 			refetchInterval={5 * 60} // Refetch every 5 minutes
